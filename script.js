@@ -9,7 +9,7 @@ search.addEventListener('submit', async function(e){
     e.preventDefault()
 let search=form.elements.query
 console.log(search)
-const res=await axios.get(`http://api.weatherapi.com/v1/current.json?key=1b594bf0b16f41a49c6100152253008&q={${search.value}}`)
+const res=await axios.get(`https://api.weatherapi.com/v1/current.json?key=1b594bf0b16f41a49c6100152253008&q={${search.value}}`)
 console.log(res.data)
 displayData(res.data)
 search.value=''
